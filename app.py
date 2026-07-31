@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import streamlit_analytics
 
 st.set_page_config(
     page_title="Auto Video Upload Optimizer",
