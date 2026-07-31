@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -7,6 +8,14 @@ st.set_page_config(
     page_title="Auto Video Upload Optimizer",
     page_icon="📊",
     layout="centered"
+)
+
+components.html(
+    """
+    <script data-goatcounter="https://coolmulu.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    """,
+    height=0,
 )
 
 st.title("📊 Auto Video Upload Optimizer")
