@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+import streamlit_analytics
 
 st.set_page_config(
     page_title="Auto Video Upload Optimizer",
@@ -10,21 +10,9 @@ st.set_page_config(
     layout="centered"
 )
 
-# Google Analytics
-st.markdown(
-    """
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2WJERELX3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-M2WJERELX3');
-    </script>
-    """,
-    unsafe_allow_html=True
-)
+with streamlit_analytics.track(
+    unsafe_allow_tracking=True
+):
 
 st.title("📊 Auto Video Upload Optimizer")
 
